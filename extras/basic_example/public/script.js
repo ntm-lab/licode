@@ -116,7 +116,10 @@ const startBasicExample = () => {
     req.send(JSON.stringify(roomData));
   };
 
-  const roomId = localStorage.getItem("room");
+  const roomId = '';
+  if (localStorage.getItem("room") !== null){
+    roomId = localStorage.getItem("room");
+  }
 
   const roomData = { username: `user ${parseInt(Math.random() * 100, 10)}`,
     role: 'presenter',
