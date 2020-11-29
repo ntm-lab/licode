@@ -4,7 +4,7 @@
 /* eslint-env browser */
 /* eslint-disable no-param-reassign, no-console */
 
-const serverUrl = '/';
+const serverUrl = '/vc/';
 let localStream;
 let room;
 let recording = false;
@@ -116,8 +116,11 @@ const startBasicExample = () => {
     req.send(JSON.stringify(roomData));
   };
 
+  const roomId = localStorage.getItem("room");
+
   const roomData = { username: `user ${parseInt(Math.random() * 100, 10)}`,
     role: 'presenter',
+    roomId: roomId,
     room: configFlags.room,
     type: configFlags.type,
     mediaConfiguration: configFlags.mediaConfiguration };

@@ -4,13 +4,27 @@
     <script type="text/javascript" src="erizo.js"></script>
     <script type="text/javascript" src="script.js"></script>
   </head>
-
+  <style>
+    .licode_subbar{
+      visibility: hidden;
+    }
+    button{
+      visibility: hidden;
+      position: absolute;
+    }
+    .f-container{
+      display:flex;
+    }
+    body{
+      margin: 0;
+    }
+  </style>
   <body>
     <button id="startButton" onclick="startBasicExample()" disabled>Start</button>
     <button id="testConnection" onclick="testConnection()">Test Connection</button>
     <button id="recordButton" onclick="startRecording()" disabled>Toggle Recording</button>
     <button id="slideShowMode" onclick="toggleSlideShowMode()" disabled>Toggle Slide Show Mode</button>
     <h1 id="startWarning">Press the start buttong to start receiving streams</h1>
-    <div id="videoContainer"></div>
+    <div id="videoContainer" class="f-container"></div>
   </body>
 </html>

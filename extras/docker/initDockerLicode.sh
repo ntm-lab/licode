@@ -9,6 +9,8 @@ NVM_CHECK="$ROOT"/scripts/checkNvm.sh
 echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$BUILD_DIR/libdeps/build/lib" >> ~/.bashrc
 
 
+service nginx restart
+
 parse_arguments(){
   if [ -z "$1" ]; then
     echo "No parameters -- starting everything"

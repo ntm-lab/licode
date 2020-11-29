@@ -9,7 +9,7 @@ ENV TZ=Europe/Madrid
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Download latest version of the code and install dependencies
-RUN  apt-get update && apt-get install -y git wget curl
+RUN  apt-get update && apt-get install -y git wget curl nginx
 
 COPY .nvmrc package.json /opt/licode/
 
