@@ -9,3 +9,4 @@ services:
     volumes:
       - ./config/nginx.conf:/etc/nginx/sites-enabled/default
       - ./cert/:/opt/cert/
+      - ../kamuhakari/www/dist:/var/www/dist

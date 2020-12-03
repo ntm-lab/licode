@@ -116,15 +116,12 @@ const startBasicExample = () => {
     req.send(JSON.stringify(roomData));
   };
 
-  const roomId = '';
-  if (localStorage.getItem("room") !== null){
-    roomId = localStorage.getItem("room");
-  }
+  const roomId = localStorage.getItem("room");
 
   const roomData = { username: `user ${parseInt(Math.random() * 100, 10)}`,
     role: 'presenter',
-    roomId: roomId,
-    room: configFlags.room,
+    // roomId: roomId,
+    room: roomId,
     type: configFlags.type,
     mediaConfiguration: configFlags.mediaConfiguration };
 
